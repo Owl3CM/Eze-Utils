@@ -1,0 +1,25 @@
+@layer tools {
+.spliter{
+  background-color: var(--json-cyan);
+  opacity: 0.2;
+  margin: 3px;
+  border-radius: 5px;
+}
+.spliter:active, .spliter:hover{
+  opacity: 1;
+}
+
+.spliter-vertical{
+  cursor: row-resize;
+  margin-inline: auto;
+  padding-block: 3px;
+  width: 20%;
+}
+
+.spliter-horizontal{
+  cursor: col-resize;
+  margin-block: auto;
+  padding-inline: 3px;
+  height: 20%;
+}
+}

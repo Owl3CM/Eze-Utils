@@ -43,7 +43,7 @@ const _Object = ({ json }: any) => {
     .filter(([_, value]: any) => nullables.includes(value) === false)
     .sort((o: any) => (sortByType(o[1]) ? -1 : 1));
   return (
-    <div className="json-bg-prim rounded-l p-s row-center wrap gap-s">
+    <div className="json-bg-prim round-sm p-lg row-center wrap gap-md">
       <span>{"{"}</span>
       {_json.map(([key, value]: any, _i) => {
         let type = getType(value);

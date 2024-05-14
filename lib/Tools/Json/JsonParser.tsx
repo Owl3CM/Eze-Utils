@@ -42,7 +42,7 @@ const _Object = ({ key, item }: any) => {
     .filter(([_, value]: any) => nullables.includes(value) === false)
     .sort((o: any) => (sortByType(o[1]) ? -1 : 1));
   let nodes = document.createElement("div");
-  nodes.className = "json-bg-prim rounded-l p-s row-center wrap gap-s";
+  nodes.className = "json-bg-prim round-lg p-s row-center wrap gap-s";
   nodes.id = item.id;
 
   nodes.append(Span_Tag({ innerText: "{" }));

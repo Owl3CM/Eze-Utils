@@ -6,5 +6,18 @@ const CustomEvents = {
     queryInput.dispatchEvent(new Event("change", { bubbles: true }));
     return true;
   },
+  // CustomEvents.listnToOutsideClick({ event: () => this.toggle(false), selector: this.container });
+  listnToOutsideClick: ({ event, selector }: { event: () => void; selector: HTMLElement }) => {
+    const outsideClickListener = (event: MouseEvent) => {
+      if (!selector.contains(event.target as Node)) {
+        event();
+        removeClickListener();
+      }
+    };
+    const removeClickListener = () => {
+      document.removeEventListener("click", outsideClickListener);
+    };
+    document.addEventListener("click", outsideClickListener);
+  },
 };
 export default CustomEvents;

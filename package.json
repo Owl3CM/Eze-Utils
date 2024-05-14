@@ -1,6 +1,6 @@
 {
   "name": "eze-utils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Eze-Utils",
   "main": "dist/index.js",
   "source": "lib/index.ts",

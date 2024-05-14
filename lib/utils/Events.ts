@@ -10,7 +10,7 @@ const CustomEvents = {
   listnToOutsideClick: ({ event, selector }: { event: () => void; selector: HTMLElement }) => {
     const outsideClickListener = (event: MouseEvent) => {
       if (!selector.contains(event.target as Node)) {
-        event();
+        (event as any)();
         removeClickListener();
       }
     };
